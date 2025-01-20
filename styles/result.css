@@ -1,0 +1,216 @@
+:root {
+    --amarillo: #F0BF4C;
+    --gris: rgb(82, 77, 69);
+}
+
+body {
+    color: var(--gris);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paquetes {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    justify-self: center;
+}
+
+.paquete{
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: flex-start;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 8px 5px;
+    height: 350px;
+}
+
+
+.paquete-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.img-container{
+    width: 100px;
+    height: 100px;
+}
+
+/*
+.paquete img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+    */
+
+.paquete:active {
+    transform: scale(0.99);
+}
+
+.paquete:hover{
+    transform: scale(1.005);
+    transition: 0.5s;
+}
+
+.paquete p {
+    margin: 5px 10px;
+}
+.paquete h5 {
+    margin: 5px 10px;
+}
+
+header, footer {
+    position: relative !important;
+}
+
+.button {
+    margin: 10px;
+    border: none;
+    box-shadow: 0 1px 0 grey;
+    background-color: var(--amarillo);
+    width: 70px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#boton_solicitar {
+    background-color: var(--amarillo);
+    box-shadow: 0 1px 0 grey;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    
+}
+
+/*Formulario de solicitud*/
+
+.formulario-solicitud {
+    display: none;
+    justify-content: center;
+    margin: 20px;
+}
+
+.fieldset {
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+}
+
+.formulario-solicitud legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--gris);
+}
+
+.campos-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.campos {
+    margin: 25px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.formulario-solicitud label {
+    margin: 10px;
+}
+
+#enviar_solicitud {
+    background-color: var(--amarillo);
+    box-shadow: 0 1px 0 grey;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+}	
+
+.input-enviar {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+
+}
+
+
+/*HEADER*/
+
+header {
+    background-color: var(--amarillo);
+    position: absolute;
+    color : white;
+    display: grid;
+    direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--gris);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

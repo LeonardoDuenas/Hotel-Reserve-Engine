@@ -1,0 +1,76 @@
+:root {
+    --amarillo: #F0BF4C;
+    --gris: rgb(82, 77, 69);
+}
+
+body {
+    color: var(--gris);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    background-color: white;
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mensaje {
+    width: 70%;
+    margin: 0 auto;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: var(--amarillo);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/*HEADER*/
+
+header {
+    background-color: var(--amarillo);
+    position: absolute;
+    color : white;
+    display: grid;
+    direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--gris);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

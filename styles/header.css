@@ -1,0 +1,19 @@
+:root {
+    --amarillo: #F0BF4C;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    background-color: var(--amarillo);
+    position: absolute;
+    color : white;
+    display: grid;
+    direction: column;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

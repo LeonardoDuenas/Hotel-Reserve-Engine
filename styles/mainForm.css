@@ -1,0 +1,137 @@
+:root {
+    --amarillo: #F0BF4C;
+    --gris: rgb(82, 77, 69);
+}
+
+* {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: var(--gris) ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h1 {
+    color: white;
+}
+
+.avisos {
+    display: flex;
+    justify-content: end;
+    width: 40%;
+}
+
+#aviso-importante {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+#aviso-importante:hover {
+    transform: scale(1.1);
+}
+
+.formulario {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+form:first-child {
+    margin-top: 5%;
+}
+
+form:last-child {
+    margin-bottom: 5%;
+}
+
+.adultos-niños {
+    margin: 5px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+
+}
+
+
+#submitButton {
+    background-color: var(--amarillo);
+    color: white;
+    border: none;
+    box-shadow: 0 1px 0 grey;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#importante-dialog {
+    width: 30%;
+}
+
+#edad-niños {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+/*HEADER*/
+
+header {
+    background-color: var(--amarillo);
+    position: absolute;
+    color : white;
+    display: grid;
+    direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--gris);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

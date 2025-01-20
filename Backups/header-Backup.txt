@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motor de Reservas</title>
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <a href="index.php"><h1 id="title">Hotel Sueños del Inka</h1></a>
+        </div>
+    </header>
+</body>
+</html>
+
+
+css
+
+header {
+    top: 0;
+    width: 100%;
+    background-color: var(--amarillo);
+    position: absolute;
+    color : white;
+    display: grid;
+    direction: column;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

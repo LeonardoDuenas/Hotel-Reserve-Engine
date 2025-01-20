@@ -1,0 +1,26 @@
+:root {
+    --gris: rgb(82, 77, 69);
+}
+
+* {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer {
+    bottom: 0;
+    background-color: var(--gris);
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

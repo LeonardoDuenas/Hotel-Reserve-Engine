@@ -1,0 +1,79 @@
+<?php
+include_once 'Habitaciones.php';
+session_start();
+
+
+// echo 'Posibles paquetes: <br>';
+//     foreach ($_SESSION['paquetes'] as $paquete){
+//         echo 'Paquete: <br>';
+//         foreach ($paquete as $habitacion){
+//             $habitacion->mostrarInfoDeHab();
+//         }
+//         echo '<br>';
+//     }
+
+//Funcion para hallar la foto de la habitacion
+function hallarFoto($numDePersonas){
+    $foto = '';
+    switch ($numDePersonas) {
+        case 1:
+            $foto = 'simple.jpg';
+            break;
+        case 2:
+            $foto = 'doble.jpg';
+            break;
+        case 3:
+            $foto = 'triple.jpg';
+            break;
+        default:
+            $foto = 'simple.jpg';
+            break;
+    }
+    return $foto;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motor de Reservas</title>
+    <link rel="stylesheet" type="text/css" href="styles/result.css">
+    <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <?php include_once 'header.php'; ?>
+    <div class="content">
+    <?php 
+    $numDePaquete = 1;
+    echo '<div class="paquetes">';
+    echo '<h1>Posibles paquetes:</h1>';
+    foreach ($_SESSION['paquetes'] as $paquete){
+        echo '<h2>Paquete '. $numDePaquete.':</h2>';
+        echo '<div class="paquete">';
+        $numDePaquete++;
+        foreach ($paquete as $habitacion){
+            //Could add an image here of one of the rooms
+            echo '<p> Habitacion '.$habitacion->getTipo().'</p>';
+            echo '<p> Numero de Personas: '.$habitacion->getPersonas().'</p>';
+            foreach ($habitacion->getCamas() as $cama){
+                echo '<p> Cama '.$cama->getTipo().'</p>';
+            }
+            echo '</br>';
+        }
+        echo '</div>';
+    }
+
+    echo '</div>';
+    ?>
+
+    <a id="boton-reservar" href="#"><div class="button">Resevar</div></a>
+
+    </div>
+
+    <?php include_once 'footer.php'; ?>
+</body>
